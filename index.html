@@ -23,62 +23,91 @@
 
             <div id="message"></div>
 
-            <form id="appointmentForm">
+           <form id="appointmentForm">
 
-                <input type="hidden" id="appointmentId">
+    <input type="hidden" id="appointmentId">
 
-                <div class="form-group">
-                    <input
-                        type="text"
-                        id="patientName"
-                        placeholder="Enter Patient Name"
-                        required>
-                </div>
+    <div class="form-row">
 
-                <div class="form-group">
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter Email"
-                        required>
-                </div>
+        <div class="form-group">
+            <label>PATIENT NAME</label>
+            <input
+                type="text"
+                id="patientName"
+                placeholder="e.g. John Doe"
+                required>
+        </div>
 
-                <div class="form-group">
-                    <input
-                        type="text"
-                        id="mobile"
-                        placeholder="Enter Mobile Number"
-                        required>
-                </div>
+        <div class="form-group">
+            <label>EMAIL</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="patient@email.com"
+                required>
+        </div>
 
-                <div class="form-group">
-                    <select id="doctorName" required>
-                        <option value="">Select Doctor</option>
-                        <option value="Dr. Rajesh">Dr. Rajesh</option>
-                        <option value="Dr. Priya">Dr. Priya</option>
-                        <option value="Dr. Kumar">Dr. Kumar</option>
-                    </select>
-                </div>
+    </div>
 
-                <div class="form-group">
-                    <input
-                        type="date"
-                        id="appointmentDate"
-                        required>
-                </div>
+    <div class="form-row">
 
-                <div class="form-group">
-                    <input
-                        type="time"
-                        id="appointmentTime"
-                        required>
-                </div>
+        <div class="form-group">
+            <label>MOBILE</label>
+            <input
+                type="text"
+                id="mobile"
+                placeholder="10-digit number"
+                required>
+        </div>
 
-                <button type="submit">
-                    Save Appointment
-                </button>
+        <div class="form-group">
+            <label>DOCTOR</label>
+            <select id="doctorName" required>
+                <option value="">
+                    -- Select Doctor --
+                </option>
 
-            </form>
+                <option value="Dr. Rajesh">
+                    Dr. Rajesh
+                </option>
+
+                <option value="Dr. Priya">
+                    Dr. Priya
+                </option>
+
+                <option value="Dr. Kumar">
+                    Dr. Kumar
+                </option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label>APPOINTMENT DATE</label>
+            <input
+                type="date"
+                id="appointmentDate"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label>APPOINTMENT TIME</label>
+            <input
+                type="time"
+                id="appointmentTime"
+                required>
+        </div>
+
+    </div>
+
+    <button type="submit">
+        💾 Save Appointment
+    </button>
+
+</form>
 
         </div>
 

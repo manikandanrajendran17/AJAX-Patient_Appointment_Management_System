@@ -6,68 +6,115 @@
 }
 
 body{
-    background:#eef3f9;
-    padding:30px;
+    background:#f4f8fc;
+    padding:20px;
 }
 
 .container{
-    max-width:1300px;
+    width:95%;
+    max-width:1400px;
     margin:auto;
 }
 
+/* HEADER */
+.main-title{
+    text-align:center;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #0284c7,
+        #10b981
+    );
+    color:white;
+    padding:30px;
+    border-radius:18px;
+    margin-bottom:25px;
+    font-size:40px;
+    font-weight:700;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* CARD */
 .card{
     background:#ffffff;
     padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    margin-bottom:30px;
+    border-radius:18px;
+    margin-bottom:25px;
+    border-top:5px solid #0284c7;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
 h2{
-    color:#1e3a5f;
-    margin-bottom:25px;
-    font-size:22px;
-    font-weight:600;
+    color:#0f172a;
+    font-size:28px;
+    margin-bottom:20px;
+    padding-bottom:10px;
+    border-bottom:2px solid #e2e8f0;
+}
+
+/* FORM */
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
 .form-group{
-    margin-bottom:18px;
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    color:#475569;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
 input,
 select{
     width:100%;
-    padding:14px;
-    border:1px solid #d6dce5;
-    border-radius:8px;
+    height:52px;
+    padding:12px 15px;
+    border:2px solid #dbeafe;
+    border-radius:10px;
     font-size:15px;
+    background:white;
     transition:0.3s;
-    background:#fff;
 }
 
 input:focus,
 select:focus{
     outline:none;
-    border-color:#0d6efd;
-    box-shadow:0 0 8px rgba(13,110,253,0.2);
+    border-color:#0284c7;
+    box-shadow:0 0 8px rgba(2,132,199,0.15);
 }
 
+/* SAVE BUTTON */
 button{
-    background:#0d6efd;
-    color:#fff;
+    background:linear-gradient(
+        90deg,
+        #0284c7,
+        #10b981
+    );
+    color:white;
     border:none;
-    padding:12px 25px;
-    border-radius:8px;
-    cursor:pointer;
+    padding:14px 28px;
+    border-radius:10px;
     font-size:15px;
+    font-weight:600;
+    cursor:pointer;
     transition:0.3s;
 }
 
 button:hover{
-    background:#0b5ed7;
     transform:translateY(-2px);
+    box-shadow:0 5px 12px rgba(0,0,0,0.15);
 }
 
+/* TABLE */
 table{
     width:100%;
     border-collapse:collapse;
@@ -78,60 +125,91 @@ table{
 table th{
     background:linear-gradient(
         90deg,
-        #0d6efd,
-        #1f7bff
+        #0f172a,
+        #0284c7,
+        #10b981
     );
     color:white;
     padding:15px;
+    text-align:center;
     font-size:15px;
 }
 
 table td{
-    padding:14px;
+    padding:15px;
     border:1px solid #e5e7eb;
     text-align:center;
+    vertical-align:middle;
 }
 
 table tr:nth-child(even){
-    background:#f8fbff;
+    background:#f8fafc;
 }
 
 table tr:hover{
-    background:#eef5ff;
+    background:#eef6ff;
+}
+
+/* ACTION BUTTONS */
+.actions{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.edit-btn,
+.delete-btn{
+    width:110px;
+    height:45px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
 }
 
 .edit-btn{
-    background:#198754;
-}
-
-.edit-btn:hover{
-    background:#157347;
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #06b6d4
+    );
 }
 
 .delete-btn{
-    background:#dc3545;
+    background:linear-gradient(
+        90deg,
+        #ef4444,
+        #f97316
+    );
 }
 
-.delete-btn:hover{
-    background:#bb2d3b;
+/* STATUS */
+.status-select{
+    width:140px;
+    height:45px;
+    border:2px solid #cbd5e1;
+    border-radius:10px;
+    background:white;
 }
 
+/* MESSAGE */
 #message{
-    margin:15px 0;
+    margin-bottom:15px;
     font-weight:bold;
 }
 
-.status-select{
-    min-width:120px;
-}
-
+/* MOBILE */
 @media(max-width:768px){
 
-    body{
-        padding:15px;
+    .form-row{
+        grid-template-columns:1fr;
     }
 
-    .card{
+    .main-title{
+        font-size:28px;
         padding:20px;
     }
 
@@ -140,11 +218,7 @@ table tr:hover{
         overflow-x:auto;
     }
 
-}
-.main-title{
-    text-align:center;
-    color:#0d6efd;
-    margin-bottom:25px;
-    font-size:32px;
-    font-weight:700;
+    .actions{
+        flex-direction:column;
+    }
 }
