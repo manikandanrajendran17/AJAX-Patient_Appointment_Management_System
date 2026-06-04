@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#eef3f9;
+    padding:30px;
+}
+
+.container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.card{
+    background:#ffffff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+}
+
+h2{
+    color:#1e3a5f;
+    margin-bottom:25px;
+    font-size:22px;
+    font-weight:600;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #d6dce5;
+    border-radius:8px;
+    font-size:15px;
+    transition:0.3s;
+    background:#fff;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#0d6efd;
+    box-shadow:0 0 8px rgba(13,110,253,0.2);
+}
+
+button{
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0b5ed7;
+    transform:translateY(-2px);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+table th{
+    background:linear-gradient(
+        90deg,
+        #0d6efd,
+        #1f7bff
+    );
+    color:white;
+    padding:15px;
+    font-size:15px;
+}
+
+table td{
+    padding:14px;
+    border:1px solid #e5e7eb;
+    text-align:center;
+}
+
+table tr:nth-child(even){
+    background:#f8fbff;
+}
+
+table tr:hover{
+    background:#eef5ff;
+}
+
+.edit-btn{
+    background:#198754;
+}
+
+.edit-btn:hover{
+    background:#157347;
+}
+
+.delete-btn{
+    background:#dc3545;
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+}
+
+#message{
+    margin:15px 0;
+    font-weight:bold;
+}
+
+.status-select{
+    min-width:120px;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+}
+.main-title{
+    text-align:center;
+    color:#0d6efd;
+    margin-bottom:25px;
+    font-size:32px;
+    font-weight:700;
+}
